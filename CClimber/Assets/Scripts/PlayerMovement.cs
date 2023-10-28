@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -41,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(new Vector3(horizontal, 0f, 0f));
 
+        
+        // Character jump
         if(Input.GetButtonDown("Jump") && isGrounded())
         {
             Debug.Log("Jump!");
