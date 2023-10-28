@@ -202,13 +202,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372186802}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.036708865, w: 0.99932605}
-  m_LocalPosition: {x: -0.59, y: -0.76, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.05396129, w: 0.998543}
+  m_LocalPosition: {x: -1.13, y: -1.03, z: 0}
   m_LocalScale: {x: 4.484242, y: 0.91158044, z: 2.1130748}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.207}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6.187}
 --- !u!61 &372186805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &460881460
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ Transform:
   m_GameObject: {fileID: 460881460}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.020206919, w: 0.99979585}
-  m_LocalPosition: {x: 1.25, y: 2.13, z: 0}
+  m_LocalPosition: {x: 1.47, y: 1.85, z: 0}
   m_LocalScale: {x: 4.322994, y: 0.91158044, z: 2.1130748}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -438,7 +438,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,13 +737,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634812038}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.020631826, w: 0.99978715}
-  m_LocalPosition: {x: 0.1, y: -3.83, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.011253336, w: 0.9999367}
+  m_LocalPosition: {x: -0.18, y: -4.08, z: 0}
   m_LocalScale: {x: 4.991859, y: 0.85844284, z: 1.9899}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.364}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.29}
 --- !u!61 &634812041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -815,7 +815,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &742864895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1070,7 @@ GameObject:
   - component: {fileID: 1956019848}
   - component: {fileID: 1956019851}
   - component: {fileID: 1956019850}
+  - component: {fileID: 1956019852}
   m_Layer: 0
   m_Name: Liesl_Ludwig_Idle
   m_TagString: Untagged
@@ -1138,8 +1139,8 @@ Transform:
   m_GameObject: {fileID: 1956019847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.74, y: -2.83, z: 0}
-  m_LocalScale: {x: 12.068624, y: 12.068624, z: 12.068624}
+  m_LocalPosition: {x: -8.85, y: -3.08, z: 0}
+  m_LocalScale: {x: 10.041819, y: 10.041819, z: 10.041819}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1216,6 +1217,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16695741}
   m_EdgeRadius: 0
+--- !u!114 &1956019852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956019847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3fc6bd879ff9d41834151e696ae9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  speed: 5
+  jump: 250
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
