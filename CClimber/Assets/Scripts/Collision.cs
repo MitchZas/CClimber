@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Collision : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Collision : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             Destroy(col.gameObject);
+            // Loads the death screen on death
+            SceneManager.LoadScene(2);
         }
    }
 }
