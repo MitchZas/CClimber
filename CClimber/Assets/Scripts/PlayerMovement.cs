@@ -17,14 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
-
-    public Animator animator;
-    private Vector3 lastPosition;
     
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     bool isGrounded(){
@@ -54,9 +50,5 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Jump!");
             rb2d.AddForce(new Vector2(rb2d.velocity.x, jump));
         }
-
-        //if(lastPosition - )
-        //animator.SetFloat("PlayerSpeed", rb2d.velocity.magnitude);
-        //lastPosition = transform.position;
     }
 }
