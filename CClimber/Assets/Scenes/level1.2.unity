@@ -613,15 +613,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 5
-<<<<<<< Updated upstream
-  jump: 250
-  boxSize: {x: 1.06, y: 0.1}
-  castDistance: 1
-=======
   jump: 500
   boxSize: {x: 1.2, y: 0.1}
   castDistance: 0.8
->>>>>>> Stashed changes
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
