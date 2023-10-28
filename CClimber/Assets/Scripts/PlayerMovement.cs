@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //if(lastPosition - )
-        animator.SetFloat("PlayerSpeed", rb2d.velocity.magnitude);
+        //animator.SetFloat("PlayerSpeed", rb2d.velocity.magnitude);
         //lastPosition = transform.position;
     }
 }
