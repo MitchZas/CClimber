@@ -593,7 +593,7 @@ Transform:
   m_GameObject: {fileID: 189087893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.93, y: -3.43, z: 0}
+  m_LocalPosition: {x: -8.71, y: -3.32, z: 0}
   m_LocalScale: {x: 4.8712497, y: 4.8712497, z: 4.8712497}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -613,19 +613,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 5
-<<<<<<< Updated upstream
-  jump: 250
-  boxSize: {x: 1.06, y: 0.1}
-  castDistance: 1
-=======
   jump: 500
   boxSize: {x: 1.2, y: 0.1}
   castDistance: 0.8
->>>>>>> Stashed changes
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  animator: {fileID: 0}
 --- !u!95 &189087899
 Animator:
   serializedVersion: 5
@@ -1508,7 +1501,7 @@ Transform:
   m_GameObject: {fileID: 1114863179}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -0.31, z: 0}
+  m_LocalPosition: {x: 0.08, y: -0.31, z: 0.5}
   m_LocalScale: {x: 1.2298, y: 1.2298, z: 1.2298}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1843,7 +1836,7 @@ Transform:
   m_GameObject: {fileID: 1647825359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 11.76, z: 0}
+  m_LocalPosition: {x: 0.06, y: 11.76, z: 0.5}
   m_LocalScale: {x: 1.2245984, y: 1.2245984, z: 1.2245984}
   m_ConstrainProportionsScale: 0
   m_Children: []
