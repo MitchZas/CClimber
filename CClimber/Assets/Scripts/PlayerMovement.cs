@@ -9,10 +9,27 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb2d;
     public float jump;
+
+
+
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask groundLayer;
     
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    bool isGrounded(){
+        if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer)){
+            return true;
+        }
+        return false;
+    }
+
+    public void OnDrawGizmos(){
+        Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
     }
 
     // Update is called once per frame
@@ -24,8 +41,9 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(new Vector3(horizontal, 0f, 0f));
 
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && isGrounded())
         {
+            Debug.Log("Jump!");
             rb2d.AddForce(new Vector2(rb2d.velocity.x, jump));
         }
     }
