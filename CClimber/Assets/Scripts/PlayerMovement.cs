@@ -18,9 +18,13 @@ public class PlayerMovement : MonoBehaviour
     public float castDistance;
     public LayerMask groundLayer;
     
+    public AudioClip jumpSound;
+    AudioSource audioSource;
+    
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     bool isGrounded(){
@@ -49,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Jump!");
             rb2d.AddForce(new Vector2(rb2d.velocity.x, jump));
+            audioSource.PlayOneShot(jumpSound, 1);
         }
     }
 }
