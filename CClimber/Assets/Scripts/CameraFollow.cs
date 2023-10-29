@@ -37,21 +37,22 @@ public class CameraFollow : MonoBehaviour
         Debug.Log("Camera Position: " + c.transform.position);
 
         
-
-        if(player.transform.position.y > upHeight){
-            Debug.Log("Going Up");
-            c.transform.position = new Vector3(0, c.transform.position.y + (player.transform.position.y - upHeight) , -10);
-            if(c.transform.position.y > maxHeight){
-                c.transform.position = new Vector3(0,maxHeight,-10);
+        if(player != null){
+            if(player.transform.position.y > upHeight){
+                Debug.Log("Going Up");
+                c.transform.position = new Vector3(0, c.transform.position.y + (player.transform.position.y - upHeight) , -10);
+                if(c.transform.position.y > maxHeight){
+                    c.transform.position = new Vector3(0,maxHeight,-10);
+                }
             }
-        }
-        if(player.transform.position.y < downHeight){
-            Debug.Log("Going Down");
-            c.transform.position = new Vector3(0, c.transform.position.y - (downHeight - player.transform.position.y) , -10);
-            if (c.transform.position.y < minHeight){
-                c.transform.position = new Vector3(0,minHeight,-10);
-            }
+            if(player.transform.position.y < downHeight){
+                Debug.Log("Going Down");
+                c.transform.position = new Vector3(0, c.transform.position.y - (downHeight - player.transform.position.y) , -10);
+                if (c.transform.position.y < minHeight){
+                    c.transform.position = new Vector3(0,minHeight,-10);
+                }
 
+            }
         }
     }
 }
