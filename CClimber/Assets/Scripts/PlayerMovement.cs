@@ -12,19 +12,23 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;
     public float jump;
 
-
+    private bool previousGrounded;
+    private bool playerGrounded;
 
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
     
-    public AudioClip jumpSound;
+    public AudioClip clipJump;
+    public AudioClip clipLand;
     AudioSource audioSource;
     
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
+        previousGrounded = false;
+        playerGrounded = false;
     }
 
     bool isGrounded(){
@@ -49,11 +53,21 @@ public class PlayerMovement : MonoBehaviour
 
         
         // Character jump
-        if(Input.GetButtonDown("Jump") && isGrounded())
+        if(isGrounded())
         {
-            Debug.Log("Jump!");
-            rb2d.AddForce(new Vector2(rb2d.velocity.x, jump));
-            audioSource.PlayOneShot(jumpSound, 1);
+            if(!previousGrounded){
+                audioSource.PlayOneShot(clipLand, 1);
+            }
+            previousGrounded = true;
+
+            if(Input.GetButtonDown("Jump") ){
+                Debug.Log("Jump!");
+                rb2d.AddForce(new Vector2(rb2d.velocity.x, jump));
+                audioSource.PlayOneShot(clipJump, 1);
+            }
+        }
+        else{
+            previousGrounded = false;
         }
     }
 }

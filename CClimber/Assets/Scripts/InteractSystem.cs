@@ -11,12 +11,17 @@ public class InteractSystem : MonoBehaviour
     private Rigidbody2D rb2d;
     private GameObject gameObj;
 
+    public AudioSource audioSource;
+    public AudioClip clipGrab;
+    public AudioClip clipDrop;
+
     public int shootForce = 5;
 
     void Start(){
         withPlayer = false;
         collider = GetComponent<Collider2D>();
         rb2d = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D col) 
@@ -62,6 +67,7 @@ public class InteractSystem : MonoBehaviour
         withPlayer = true;
         collider.enabled = false;
         rb2d.gravityScale = 0;
+        audioSource.PlayOneShot(clipGrab, 1);
 
         //turn off collision
         //turn off gravity
@@ -70,6 +76,7 @@ public class InteractSystem : MonoBehaviour
         withPlayer = false;
         collider.enabled = true;
         rb2d.gravityScale = 1;
+        audioSource.PlayOneShot(clipDrop, 1);
 
         transform.position = gameObj.transform.position + new Vector3(2, 0, 0);
     }
