@@ -22,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip clipJump;
     public AudioClip clipLand;
     AudioSource audioSource;
+
+    private Vector3 playerMovementStart;
+    private Vector3 playerMovementEnd;
+    public float movement;
+
+    public Animator animator;
     
     void Start()
     {
@@ -29,6 +35,12 @@ public class PlayerMovement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         previousGrounded = false;
         playerGrounded = false;
+
+        animator = GetComponent<Animator>();
+
+        playerMovementStart = new Vector3(transform.position.x,transform.position.y,transform.position.z);
+        playerMovementEnd = new Vector3(transform.position.x,transform.position.y,transform.position.z);
+        movement = 0f;
     }
 
     bool isGrounded(){
@@ -48,9 +60,13 @@ public class PlayerMovement : MonoBehaviour
         // Character Movement to move left and right 
         horizontal = Input.GetAxis("Horizontal");
         horizontal *= speed * Time.deltaTime;
-
+        
         transform.Translate(new Vector3(horizontal, 0f, 0f));
-
+       
+        // Player Movement Animation
+        playerMovementEnd = playerMovementEnd = new Vector3(transform.position.x,transform.position.y,transform.position.z);
+        animator.SetFloat("movement",Vector3.Distance(playerMovementStart, playerMovementEnd));
+        playerMovementStart = playerMovementEnd;
         
         // Character jump
         if(isGrounded())
@@ -69,5 +85,8 @@ public class PlayerMovement : MonoBehaviour
         else{
             previousGrounded = false;
         }
+
+        
+
     }
 }
