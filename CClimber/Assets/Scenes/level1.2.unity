@@ -2360,7 +2360,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1497515691}
   m_Enabled: 1
   m_Density: 1
@@ -2470,7 +2469,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424000707}
   m_CullTransparentMesh: 1
->>>>>>> cfc8b334eaff2acbd369dbecc2a3852001bf1a15
 --- !u!1 &1647825359
 GameObject:
   m_ObjectHideFlags: 0
