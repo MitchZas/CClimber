@@ -3016,6 +3016,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1804734312}
+  startingColor: {r: 0, g: 0, b: 0, a: 0}
+  endingColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!251 &1804734310
 PlatformEffector2D:
   m_ObjectHideFlags: 0

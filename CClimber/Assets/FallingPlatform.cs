@@ -8,12 +8,23 @@ public class FallingPlatform : MonoBehaviour
     private float destroyDelay = 2f;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Color startingColor;
+    [SerializeField] private Color endingColor;
 
+    SpriteRenderer spriteRenderer;
+
+
+    void Start() 
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(Fall());
+            spriteRenderer.color = Color.Lerp(startingColor, endingColor, Mathf.PingPong(Time.time * fallDelay, 2.0f));
         }
     }
 
