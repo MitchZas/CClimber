@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1594295657492497871}
   - component: {fileID: 124595565463485409}
   - component: {fileID: 2497005921735371649}
+  - component: {fileID: 7672441599719431184}
   m_Layer: 0
   m_Name: Gear
   m_TagString: Gear
@@ -258,4 +259,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a1dadac6316e54b8365537ce382e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathSFX: {fileID: 0}
+  deathSFX: {fileID: 8300000, guid: 91352dea04417104a88bc697e92af4e0, type: 3}
+--- !u!114 &7672441599719431184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165651595249387911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120ea2a6245a6cf44b08d923e1adc908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipBounce: {fileID: 8300000, guid: dbfb516029724444386e7999b89be5a1, type: 3}
+  clipRoll: {fileID: 8300000, guid: dbfb516029724444386e7999b89be5a1, type: 3}
+  audioSource: {fileID: 0}
+  clicksPerRotation: 6

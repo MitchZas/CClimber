@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     {
         audioSource.PlayOneShot(clipPlay, 1);
         Debug.Log ("Playing game");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame ()

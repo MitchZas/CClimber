@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
 
     private bool previousGrounded;
-    private bool playerGrounded;
+    //private bool playerGrounded;
 
     public Vector2 boxSize;
     public float castDistance;
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         previousGrounded = false;
-        playerGrounded = false;
+        //playerGrounded = false;
 
         animator = GetComponent<Animator>();
 

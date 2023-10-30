@@ -16,7 +16,7 @@ public class Collision : MonoBehaviour
    {
         if(col.gameObject.tag == "Player")
         {
-            audioSource.PlayOneShot(deathSFX, 1);
+            //audioSource.PlayOneShot(deathSFX, 1);
             Destroy(col.gameObject);
 
             // Loads the death screen on death

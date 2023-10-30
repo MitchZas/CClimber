@@ -27,16 +27,23 @@ public class GearSoundController : MonoBehaviour
     }
 
     void Update(){
+        if(transform.position.y < -5)
+        {
+            Destroy(gameObject);
+        }
+        
         if(Mathf.Abs(previousRotation - getRotation()) >= 360/clicksPerRotation ){
             audioSource.PlayOneShot(clipRoll, 1);
             previousRotation = getRotation();
         }
     }
     private void OnCollisionEnter2D(Collision2D col) 
-    {
+    { 
             if(col.gameObject.tag == "Ground")
             {
                 audioSource.PlayOneShot(clipBounce, 1);
             }
     }
+
+
 }
